@@ -1,0 +1,34 @@
+[
+    {
+        "id": 1,
+        "name": "Mochilas",
+        "brand": "Quechua",
+        "price": 25000,
+        "img": "https://d3ugyf2ht6aenh.cloudfront.net/stores/826/227/products/medidas-de-mochilas-0191-b64566fd3ef69e4b5815977746335082-1024-1024.webp",
+        "description" : "Mochila Quechua de 70Lts, impermeable, comoda y con multiples bolsillos para mayor comodidad. "
+    },
+    {
+        "id": 2,
+        "name": "Linterna frontal",
+        "brand": "Aikertec",
+        "price": 6000,
+        "img": "https://m.media-amazon.com/images/I/71WWpYkITRL._AC_SL1500_.jpg",
+        "description" : "La linterna Aikertec frontal ofrece una lampara de 2000 lumenes para mejor visibilidad nocturna y comodidad."
+    },
+    {
+        "id": 3,
+        "name": "Botella termica",
+        "brand": "H2o Capsule",
+        "price": 13800,
+        "img": "https://m.media-amazon.com/images/I/81THUYYDyWL._AC_SL1500_.jpg",
+        "description" : "Botella completamente termica, mantiene la temperatura hasta 6 hs."
+    },
+    {
+        "id": 4,
+        "name": "Zapatillas",
+        "brand": "La Sportiva",
+        "price": 38000,
+        "img": "https://www.tradeinn.com/f/13730/137304287/la-sportiva-botas-senderismo-trango-tech-cuero-goretex.jpg",
+        "description" : "Zapatillas impermeables, con buen agarre para caminatas y senderos."
+    }
+]

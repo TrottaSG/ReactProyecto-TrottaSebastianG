@@ -1,0 +1,52 @@
+.product-card-container {
+    display: flex;
+    justify-content: space-around;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin: 50px;
+    text-align: center;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin: 50px 5%;
+    min-width: 200px;
+    gap: 10px;
+    width: 12%;
+}
+
+.cardButtons {
+    display: flex;
+    flex-direction: column;
+    height: 100px;
+}
+
+.img-product-card {
+    height: 350px;
+    width: 300px;
+}
+
+.card button {
+    margin: 5px 0 0;
+    border: none;
+    outline: 0;
+    padding: 10px;
+    color: white;
+    background-color: green;
+    text-align: center;
+    cursor: pointer;
+    min-width: 100px;
+    width: 100%;
+    font-size: 15px;
+}
+
+.card img {
+    width: 100%;
+}
+
+.card button:hover {
+    opacity: 0.7;
+}
+
