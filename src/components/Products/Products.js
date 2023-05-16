@@ -5,12 +5,8 @@ import { useNavigate } from "react-router-dom";
 import "./Products.css";
 
 const Products = () => {
-  const { data, cart, setCart } = useContext(dataContext);
+  const { data, buyProducts } = useContext(dataContext);
   const navigate = useNavigate();
-
-  const buyProducts = (product) => {
-    setCart([...cart, product]);
-  };
 
   return data.map((product) => {
     return (

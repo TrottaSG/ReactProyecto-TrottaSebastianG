@@ -1,18 +1,40 @@
-import { useContext } from "react";
+import { useContext, useEffect } from "react";
 import { dataContext } from "../Context/DataContext";
+import { getFirestore, collection, query, where, orderBy, getDocs } from "firebase/firestore";
 import { useSearchParams } from "react-router-dom";
 import Navbar from "../Navbar/Navbar";
 
 import "./Detail.css";
 
 const Detail = () => {
-  const { data } = useContext(dataContext);
+  const { data, setProduct } = useContext(dataContext);
   const [searchParams] = useSearchParams();
-  const product = data.find(
-    ({ id }) => id.toString() === searchParams.get("id")
-  );
+  const product = data.find(({ id }) => id.toString() === searchParams.get("id"));
 
-  console.log({product})
+  console.log({ product });
+
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const dbFirestore = getFirestore();
+        const queryCollection = collection(dbFirestore, "product");
+
+        const queryCollectionFiltered = query(
+          queryCollection,
+          where("price", "<", 100),
+          orderBy("price", "asc")
+        );
+
+        const querySnapshot = await getDocs(queryCollectionFiltered);
+        const products = querySnapshot.docs.map((product) => ({ id: product.id, ...product.data() }));
+        setProduct(products);
+      } catch (err) {
+        console.log(err);
+      }
+    };
+
+    fetchData();
+  }, []);
 
   return (
     <div>
